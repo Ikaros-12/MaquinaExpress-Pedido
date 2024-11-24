@@ -1,0 +1,18 @@
+.ion-padding-top2{
+    padding-top: 50px;
+}
+.ion-padding-card{
+    padding: 20px;
+}
+.ion-padding-div{
+    padding-right: 20px;
+}
+
+.card { border-radius : 50px; }
+
+@media screen and (max-width: 600px ) {
+    .ion-padding-top2{
+        padding-top: 10px;
+    }
+    
+}
