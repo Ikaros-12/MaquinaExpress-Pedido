@@ -20,23 +20,29 @@
     </ion-grid>
   </ion-card>
   @if(listaproducto.length> 0){
-    @for (listaproducto of listaproducto; track $index){
-      <ion-card class="card">
+    @for (producto of listaproducto; track $index){
+      <ion-card class="card" (click)="pagar(producto.id)">
         <ion-grid>
           <ion-row>
             <ion-col>
+              @if(producto.imagen==""){
               <img height="200px" alt="Silhouette of mountains"
                 src="https://media.istockphoto.com/id/458464735/es/foto/coca-cola.jpg?s=612x612&w=0&k=20&c=SnB7NqAiTxs3PQzWpSpwOiOncP1hbYHEP9zaDurvLwU=" />
+              }
+              @else{
+                <img height="200px" alt="Silhouette of mountains"
+                src={{producto.imagen}} />
+              }
             </ion-col>
     
             <ion-col class="ion-padding-div">
     
-              <ion-card-title class="ion-padding-top">Coca-Cola</ion-card-title>
+              <ion-card-title class="ion-padding-top">{{producto.producto}}</ion-card-title>
     
               <ion-card-content>
                 Here's a small text description for the card content. Nothing more, nothing less.
               </ion-card-content>
-              <ion-card-title class="ion-padding-top2 ion-float-right ion-padding-end">$2000</ion-card-title>
+              <ion-card-title class="ion-padding-top2 ion-float-right ion-padding-end">$ {{producto.precio}}</ion-card-title>
             </ion-col>
           </ion-row>
         </ion-grid>

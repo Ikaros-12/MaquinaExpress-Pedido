@@ -7,7 +7,11 @@ export const routes: Routes = [
 
   },
   {
-    path: 'pedido',
+    path: 'pedido/:url',
+    loadComponent: () => import('./home/home.page').then( m => m.HomePage)
+  },
+  {
+    path: 'pedido/:url/:status',
     loadComponent: () => import('./home/home.page').then( m => m.HomePage)
   }
 ];
