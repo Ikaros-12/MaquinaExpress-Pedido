@@ -25,13 +25,13 @@
         <ion-grid>
           <ion-row>
             <ion-col>
-              @if(producto.imagen==""){
+              @if(producto.imagen=="" || producto.imagen==null){
               <img height="200px" alt="Silhouette of mountains"
-                src="https://media.istockphoto.com/id/458464735/es/foto/coca-cola.jpg?s=612x612&w=0&k=20&c=SnB7NqAiTxs3PQzWpSpwOiOncP1hbYHEP9zaDurvLwU=" />
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJkg3PjrmPcQ9N5vgxhCRNXVGysgdpD15X0w&s" />
               }
               @else{
                 <img height="200px" alt="Silhouette of mountains"
-                src={{producto.imagen}} />
+                src="http://localhost:8090/pedido/images/{{producto.imagen}}" />
               }
             </ion-col>
     
