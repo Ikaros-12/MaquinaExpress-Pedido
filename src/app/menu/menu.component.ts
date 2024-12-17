@@ -74,7 +74,7 @@ export class MenuComponent  implements OnInit {
       'id':id
     }
 
-    var response=this.http.post('http://localhost:8090/pedido/pagar', data,{ "headers" : headers })
+    var response=this.http.post('http://192.168.1.225:8090/pedido/pagar', data,{ "headers" : headers })
     response.subscribe(res=>{
       console.log(json)
       var json = Object(res)
@@ -89,7 +89,7 @@ export class MenuComponent  implements OnInit {
     const headers = new HttpHeaders();                
     headers.set('Content-Type','application/json');
 
-    var response=this.http.get<Producto[]>('http://localhost:8090/pedido/menu/'+this.url,{ "headers" : headers })
+    var response=this.http.get<Producto[]>('http://192.168.1.225:8090/pedido/menu/'+this.url,{ "headers" : headers })
     response.subscribe(res=>{
       this.listaproducto=res
     }    
